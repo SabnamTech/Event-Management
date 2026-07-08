@@ -1,0 +1,48 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #10182f;
+  border-radius: 18px;
+  height : 50px;
+}
+
+
+
+.logo-img {
+  width: 190px;
+  height: 150px;
+  object-fit: contain;
+}
+
+
+
+ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+li {
+  font-size: 15px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+.login{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #10182f;
+    color: rgb(247, 243, 243);
+}
+.create{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #8a4fff;
+    color: rgb(247, 243, 243);
+}

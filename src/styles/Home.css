@@ -1,0 +1,24 @@
+body {
+  background: #050d1d;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.home {
+  padding: 20px;
+}
+
+.events-section {
+  margin-top: 30px;
+  padding: 0 30px;
+}
+
+.events-section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
