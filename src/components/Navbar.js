@@ -1,5 +1,6 @@
 import "../styles/Navbar.css";
 import logo from "../assets/logo.jpg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -18,7 +19,11 @@ function Navbar() {
       </ul>
 
       <div className="nav-buttons">
-        <button className="login">Log In</button>
+       <Link to="/login">
+        <button className="login">
+            Log In
+        </button>
+    </Link>
         <button className="create">Create Event</button>
       </div>
     </nav>
