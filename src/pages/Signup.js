@@ -2,15 +2,15 @@ import "./../styles/Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import loginImage from "../assets/hero-ticket.jpg";
+import signupImage from "../assets/hero-ticket.jpg";
 
-function Login() {
+function Signup() {
 
     const navigate = useNavigate();
 
     const [showPopup, setShowPopup] = useState(false);
 
-    const handleLogin = () => {
+    const handleSignup = () => {
 
         setShowPopup(true);
 
@@ -28,11 +28,11 @@ function Login() {
 
             <div className="login-left">
 
-                <img src={loginImage} alt="login"/>
+                <img src={signupImage} alt="signup"/>
 
                 <div className="overlay">
 
-                    <h1>Welcome Back!</h1>
+                    <h1>Create Your Account!</h1>
 
                 </div>
 
@@ -43,18 +43,19 @@ function Login() {
                 <div className="login-card">
 
                     <Link to="/" className="back">
-
                         ← Back
-
                     </Link>
 
-                    <h2>Login</h2>
+                    <h2>Sign Up</h2>
 
                     <p>
-
-                        Login to continue
-
+                        Create an account to start hosting events.
                     </p>
+
+                    <input
+                        type="text"
+                        placeholder="Full Name"
+                    />
 
                     <input
                         type="email"
@@ -66,58 +67,34 @@ function Login() {
                         placeholder="Password"
                     />
 
-                    <div className="options">
-
-                        <label className="remember">
-
-                            <input type="checkbox"/>
-
-                            <span>Remember Me</span>
-
-                        </label>
-
-                        <a href="/">Forgot Password?</a>
-
-                    </div>
+                    <input
+                        type="password"
+                        placeholder="Confirm Password"
+                    />
 
                     <button
-
                         className="login-btn"
-
-                        onClick={handleLogin}
-
+                        onClick={handleSignup}
                     >
-
-                        Login
-
+                        Create Account
                     </button>
 
                     <div className="divider">
-
                         OR
-
                     </div>
 
                     <button className="google-btn">
-
                         Continue with Google
-
                     </button>
 
-                    <p className="signup">
-
-                        Don't have an account?
-
-                        <Link to="/signup">
-
-                            <span> Sign Up</span>
-
+                    <p className="login-link">
+                        Already have an account?
+                        <Link to="/login">
+                            <span> Login</span>
                         </Link>
-
                     </p>
 
                 </div>
-
             </div>
 
             {showPopup && (
@@ -125,21 +102,13 @@ function Login() {
                 <div className="success-popup">
 
                     <div className="check-circle">
-
                         ✔
-
                     </div>
 
-                    <h2>
-
-                        Login Successful!
-
-                    </h2>
+                    <h2>Account Created!</h2>
 
                     <p>
-
-                        Redirecting to Dashboard...
-
+                        Welcome to Nexvent. Redirecting to Dashboard...
                     </p>
 
                 </div>
@@ -152,4 +121,4 @@ function Login() {
 
 }
 
-export default Login;
+export default Signup;

@@ -11,11 +11,30 @@ function Navbar() {
       </div>
 
       <ul>
-        <li>Explore Events</li>
-        <li>Host an Event</li>
-        <li>Pricing</li>
-        <li>Features</li>
-        <li>Resources</li>
+        <li>
+    <Link to="/">Home</Link>
+</li>
+
+<li>
+    <Link to="/explore">Explore Events</Link>
+</li>
+
+<li>
+    <Link to="/host">Host an Event</Link>
+</li>
+
+<li>
+    <Link to="/pricing">Pricing</Link>
+</li>
+<li>
+    <Link to="/dashboard">
+
+Dashboard
+
+</Link>
+</li>
+
+
       </ul>
 
       <div className="nav-buttons">
@@ -24,7 +43,9 @@ function Navbar() {
             Log In
         </button>
     </Link>
-        <button className="create">Create Event</button>
+  <Link to="/host" className="create-btn">
+    Create Event
+</Link>
       </div>
     </nav>
   );
